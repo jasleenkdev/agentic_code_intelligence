@@ -13,6 +13,30 @@ MRR on the test split of CoIR APPS** via MTEB's `AppsRetrieval` task.
   evaluation runs the full pipeline, not just one embedding per text.
 - **Versions (P1)** and **all-versions retrieval with lineages (bonus)**, with a live demo UI.
 
+## Architecture
+
+![Search pipeline](docs/search-pipeline-slide.png)
+
+Query → Clean (strip LaTeX/judge boilerplate, label program style) → Dense recall over all snippets with two
+open-weight embedders (jina-code-embeddings-0.5b at weight 1.0 + Qwen3-Embedding-0.6B at 0.4, hubness-penalised) → Rerank the top 100
+(program style, shared literals, small BM25) → Top 10. Versions lane: git history at any ref → tree-sitter function chunking
+(JS codebases) → content-hash embedding cache (only changed text is re-encoded) → one index per version → lineage grouping
+for the all-versions view. The two-model blend (jina + Qwen3) is used for the APPS benchmark; codebase versions (Gladys)
+are indexed with one model, gte-modernbert (`CODESEARCH_CODEBASE_MODEL`, `src/config.py:80`). Everything runs locally on the CPU; no API calls at run time (models and data download once, at setup).
+
+![Data boundary](docs/data-boundary-slide.png)
+*Data boundary: queries, models, indexes and the embedding cache stay on the machine; nothing is sent to an external service.*
+
+![Evaluation protocol](docs/eval-protocol-slide.png)
+*Evaluation protocol: every choice made on APPS train splits; the frozen config is scored once on the test split.*
+
+![Pluggable parts](docs/pluggable-parts-slide.png)
+*Pluggable parts: language chunker, embedding model and search backend are swappable (C/C++ and ANN are planned, not built).*
+
+## Demo
+
+Demo video (under 2 min): [Watch the demo](https://drive.google.com/file/d/1Br9rfmWd3nyecw0P59VIBUnEA8tTfnxu/view?usp=sharing)
+
 ## Results
 
 ### APPS test split (official run, `./run.sh submit`)
@@ -194,9 +218,11 @@ query ─► pass 0: pre-process ─► pass 1: dense recall ──────�
          split statement /      jina-code-0.5b  (w 1.0)          + program-style agreement      snippets
          input / output /       Qwen3-Emb-0.6B (w 0.4)           + shared literals (IDF)
          examples / notes,      Σ w·cos  =  cosine over          + BM25 (small weight)
-         strip LaTeX, cat-      weighted concatenated            − snippet hubness
-         egorise (stdin /       embeddings, exact search         (per-query z-scored)
+         strip LaTeX, cat-      weighted concatenated            (per-query z-scored)
+         egorise (stdin /       embeddings, exact search
          function / class)      over all snippets
+                                − snippet hubness (before
+                                the top 100 is chosen)
 ```
 
 - **Pre-processing (pass 0).** Problem statements carry judge boilerplate (`-----Input-----`,
@@ -204,12 +230,13 @@ query ─► pass 0: pre-process ─► pass 1: dense recall ──────�
   categorise the program the query asks for. Sample I/O is kept — dropping it hurt.
 - **Dense recall (pass 1).** Two free code embedders with their own instruction prefixes; a
   weighted sum of cosines is one cosine over the weighted concatenation, which is also what the
-  class's `encode()` returns. Models are loaded in float32: half precision is 12× slower on this
-  CPU (D-036).
+  class's `encode()` returns. A query-free hubness penalty (mean similarity to a snippet's
+  nearest snippets) is subtracted from each model's cosines here, over all snippets, before the
+  top 100 is chosen. Models are loaded in float32: half precision is 12× slower on this CPU
+  (D-036).
 - **Rerank (pass 2).** On the top 100 only: a bonus when a snippet's program form (stdin script /
   function / `class Solution`) matches the query's; the IDF-weighted overlap of string/number
-  literals shared by code and statement (`"IMPOSSIBLE"`, `998244353`); a query-free hubness
-  penalty (mean similarity to a snippet's nearest snippets); a small BM25 term.
+  literals shared by code and statement (`"IMPOSSIBLE"`, `998244353`); a small BM25 term.
 - **Versions / lineages.** Every version is its own index keyed by version label or git commit;
   the all-versions view groups near-identical snippets across versions into lineages (stable key,
   identical text, or embedding cosine + identifier-agnostic token shape), collapses each lineage
@@ -250,5 +277,3 @@ default** (generation is out of scope now): tick "LLM explanation", pass `--expl
 | [MTEB](https://github.com/embeddings-benchmark/mteb) | Apache-2.0 | official evaluation |
 | [Gladys Assistant](https://github.com/GladysAssistant/Gladys) | Apache-2.0 | codebase for versions / agent demo (read-only) |
 | qwen2.5-coder via Ollama, faster-whisper | Apache-2.0 / MIT | optional Gladys-agent explanation, voice input |
-
-DEMO LINK: https://drive.google.com/file/d/15vH87EHcXKu_cyzX0yF3EVYZnRCamuJE/view?usp=sharing
