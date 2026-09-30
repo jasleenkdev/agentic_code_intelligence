@@ -1,0 +1,875 @@
+{
+  "generated_from_commit": "8574722f2ffb1fafc10868396cfefd38a1880586",
+  "seed": 42,
+  "labels": "auto-derived from AST/call graph/catalog/grep; no manual labelling",
+  "queries": [
+    {
+      "id": "sem-01",
+      "type": "semantic",
+      "set": "original",
+      "query": "Find the code that does this: Xiaomi onMessage callback",
+      "gold": [
+        {
+          "file_path": "server/services/xiaomi/lib/event/xiaomi.onMessage.js",
+          "start_line": 9,
+          "end_line": 79
+        }
+      ],
+      "source": "JSDoc of onMessage"
+    },
+    {
+      "id": "sem-02",
+      "type": "semantic",
+      "set": "original",
+      "query": "Find the code that does this: Update an energy price by selector",
+      "gold": [
+        {
+          "file_path": "server/lib/energy-price/price.update.js",
+          "start_line": 12,
+          "end_line": 19
+        }
+      ],
+      "source": "JSDoc of update"
+    },
+    {
+      "id": "sem-03",
+      "type": "semantic",
+      "set": "original",
+      "query": "Find the code that does this: This will init the Matter service",
+      "gold": [
+        {
+          "file_path": "server/services/matter/lib/matter.init.js",
+          "start_line": 11,
+          "end_line": 64
+        }
+      ],
+      "source": "JSDoc of init"
+    },
+    {
+      "id": "sem-04",
+      "type": "semantic",
+      "set": "original",
+      "query": "Find the code that does this: Read raw audio from the request body",
+      "gold": [
+        {
+          "file_path": "server/api/utils/getAudioBufferFromRequest.js",
+          "start_line": 13,
+          "end_line": 28
+        }
+      ],
+      "source": "JSDoc of getAudioBufferFromRequest"
+    },
+    {
+      "id": "sem-05",
+      "type": "semantic",
+      "set": "original",
+      "query": "Find the code that does this: List allowed AI chat models for the UI",
+      "gold": [
+        {
+          "file_path": "server/utils/aiChatModels.js",
+          "start_line": 76,
+          "end_line": 83
+        }
+      ],
+      "source": "JSDoc of getAiChatModelsList"
+    },
+    {
+      "id": "sem-06",
+      "type": "semantic",
+      "set": "original",
+      "query": "Find the code that does this: Loads Tuya stored configuration",
+      "gold": [
+        {
+          "file_path": "server/services/tuya/lib/tuya.getConfiguration.js",
+          "start_line": 11,
+          "end_line": 30
+        }
+      ],
+      "source": "JSDoc of getConfiguration"
+    },
+    {
+      "id": "sem-07",
+      "type": "semantic",
+      "set": "original",
+      "query": "Find the code that does this: Handle New Gateway Owntracks Location",
+      "gold": [
+        {
+          "file_path": "server/lib/location/location.handleNewGatewayOwntracksLocation.js",
+          "start_line": 11,
+          "end_line": 24
+        }
+      ],
+      "source": "JSDoc of handleNewGatewayOwntracksLocation"
+    },
+    {
+      "id": "sem-08",
+      "type": "semantic",
+      "set": "original",
+      "query": "Find the code that does this: The actual check, always called under the in-flight guard of checkAlerts",
+      "gold": [
+        {
+          "file_path": "server/lib/weather/weather.checkAlerts.js",
+          "start_line": 32,
+          "end_line": 94
+        }
+      ],
+      "source": "JSDoc of runCheck"
+    },
+    {
+      "id": "sem-09",
+      "type": "semantic",
+      "set": "original",
+      "query": "Find the code that does this: Bind one of the two threshold temperatures to its Gladys setpoint feature",
+      "gold": [
+        {
+          "file_path": "server/services/homekit/lib/buildThermostatService.js",
+          "start_line": 164,
+          "end_line": 175
+        }
+      ],
+      "source": "JSDoc of bindThresholdCharacteristic"
+    },
+    {
+      "id": "sem-10",
+      "type": "semantic",
+      "set": "original",
+      "query": "Find the code that does this: Start configuration depending on host",
+      "gold": [
+        {
+          "file_path": "server/services/caldav/lib/config/index.js",
+          "start_line": 13,
+          "end_line": 83
+        }
+      ],
+      "source": "JSDoc of config"
+    },
+    {
+      "id": "sem-11",
+      "type": "semantic",
+      "set": "original",
+      "query": "Find the code that does this: Save MELCloud configuration",
+      "gold": [
+        {
+          "file_path": "server/services/melcloud/lib/melcloud.saveConfiguration.js",
+          "start_line": 12,
+          "end_line": 19
+        }
+      ],
+      "source": "JSDoc of saveConfiguration"
+    },
+    {
+      "id": "sem-12",
+      "type": "semantic",
+      "set": "original",
+      "query": "Find the code that does this: Add ability to send/receive Nextcloud Talk message",
+      "gold": [
+        {
+          "file_path": "server/services/nextcloud-talk/lib/index.js",
+          "start_line": 19,
+          "end_line": 25
+        }
+      ],
+      "source": "JSDoc of MessageHandler"
+    },
+    {
+      "id": "str-01",
+      "type": "structural",
+      "subtype": "sequence",
+      "query": "Which files call queueWrapper before floorToThirtyMinutes?",
+      "gold": [
+        {
+          "file_path": "server/services/energy-monitoring/lib/energy-monitoring.calculateEnergyFromIndexFromBeginning.js",
+          "start_line": 24,
+          "end_line": 161
+        },
+        {
+          "file_path": "server/services/energy-monitoring/lib/energy-monitoring.calculateEnergyFromIndexThirtyMinutes.js",
+          "start_line": 15,
+          "end_line": 25
+        }
+      ],
+      "source": "find_call_sequence(same_function=True)",
+      "set": "original"
+    },
+    {
+      "id": "str-02",
+      "type": "structural",
+      "subtype": "sequence",
+      "query": "Which files call isOnHostNetwork before handleQuery?",
+      "gold": [
+        {
+          "file_path": "server/lib/mdns/mdns.start.js",
+          "start_line": 36,
+          "end_line": 92
+        }
+      ],
+      "source": "find_call_sequence(same_function=True)",
+      "set": "original"
+    },
+    {
+      "id": "str-03",
+      "type": "structural",
+      "subtype": "sequence",
+      "query": "Which files call AreaController before SystemController?",
+      "gold": [
+        {
+          "file_path": "server/api/routes.js",
+          "start_line": 33,
+          "end_line": 1067
+        }
+      ],
+      "source": "find_call_sequence(same_function=True)",
+      "set": "original"
+    },
+    {
+      "id": "str-04",
+      "type": "structural",
+      "subtype": "sequence",
+      "query": "Which files call stripToolTraceEchoFromAnswer before isToolExecutionErrorText?",
+      "gold": [
+        {
+          "file_path": "server/lib/gateway/gateway.forwardMessageToAiChat.js",
+          "start_line": 471,
+          "end_line": 828
+        }
+      ],
+      "source": "find_call_sequence(same_function=True)",
+      "set": "original"
+    },
+    {
+      "id": "str-05",
+      "type": "structural",
+      "subtype": "callers",
+      "query": "Who calls syncChipsWatcher?",
+      "gold": [
+        {
+          "file_path": "front/src/components/layout/index.jsx",
+          "start_line": 131,
+          "end_line": 131
+        },
+        {
+          "file_path": "front/src/components/layout/index.jsx",
+          "start_line": 135,
+          "end_line": 135
+        }
+      ],
+      "source": "get_callers (resolved edges)",
+      "set": "original"
+    },
+    {
+      "id": "str-06",
+      "type": "structural",
+      "subtype": "callers",
+      "query": "Who calls isPricesRoute?",
+      "gold": [
+        {
+          "file_path": "front/src/routes/integration/all/energy-monitoring/EnergyMonitoring.jsx",
+          "start_line": 174,
+          "end_line": 174
+        },
+        {
+          "file_path": "front/src/routes/integration/all/energy-monitoring/EnergyMonitoring.jsx",
+          "start_line": 181,
+          "end_line": 181
+        },
+        {
+          "file_path": "front/src/routes/integration/all/energy-monitoring/EnergyMonitoring.jsx",
+          "start_line": 1551,
+          "end_line": 1551
+        }
+      ],
+      "source": "get_callers (resolved edges)",
+      "set": "original"
+    },
+    {
+      "id": "str-07",
+      "type": "structural",
+      "subtype": "callers",
+      "query": "Who calls rememberCatalogUrl?",
+      "gold": [
+        {
+          "file_path": "front/src/routes/integration/index.js",
+          "start_line": 95,
+          "end_line": 95
+        },
+        {
+          "file_path": "front/src/routes/integration/index.js",
+          "start_line": 509,
+          "end_line": 509
+        }
+      ],
+      "source": "get_callers (resolved edges)",
+      "set": "original"
+    },
+    {
+      "id": "str-08",
+      "type": "structural",
+      "subtype": "callers",
+      "query": "Who calls getLocalPollDpsFromParams?",
+      "gold": [
+        {
+          "file_path": "front/src/routes/integration/all/tuya/TuyaDeviceBox.jsx",
+          "start_line": 33,
+          "end_line": 33
+        },
+        {
+          "file_path": "front/src/routes/integration/all/tuya/discover-page/TuyaGithubIssueSection.jsx",
+          "start_line": 58,
+          "end_line": 58
+        }
+      ],
+      "source": "get_callers (resolved edges)",
+      "set": "original"
+    },
+    {
+      "id": "str-09",
+      "type": "structural",
+      "subtype": "callees",
+      "query": "What does formatAlert call?",
+      "gold": [
+        {
+          "file_path": "server/services/mcp/lib/formatWeather.js",
+          "start_line": 120,
+          "end_line": 129
+        },
+        {
+          "file_path": "server/services/mcp/lib/formatWeather.js",
+          "start_line": 190,
+          "end_line": 192
+        }
+      ],
+      "source": "get_callees (resolved targets)",
+      "set": "original"
+    },
+    {
+      "id": "str-10",
+      "type": "structural",
+      "subtype": "callees",
+      "query": "What does prepareImageUpload call?",
+      "gold": [
+        {
+          "file_path": "front/src/utils/downscaleImage.js",
+          "start_line": 30,
+          "end_line": 43
+        },
+        {
+          "file_path": "front/src/utils/downscaleImage.js",
+          "start_line": 45,
+          "end_line": 51
+        },
+        {
+          "file_path": "front/src/utils/downscaleImage.js",
+          "start_line": 56,
+          "end_line": 61
+        },
+        {
+          "file_path": "front/src/utils/downscaleImage.js",
+          "start_line": 66,
+          "end_line": 88
+        }
+      ],
+      "source": "get_callees (resolved targets)",
+      "set": "original"
+    },
+    {
+      "id": "str-11",
+      "type": "structural",
+      "subtype": "callees",
+      "query": "What does startWatchingChips call?",
+      "gold": [
+        {
+          "file_path": "front/src/components/layout/index.jsx",
+          "start_line": 79,
+          "end_line": 85
+        },
+        {
+          "file_path": "front/src/components/layout/index.jsx",
+          "start_line": 49,
+          "end_line": 54
+        }
+      ],
+      "source": "get_callees (resolved targets)",
+      "set": "original"
+    },
+    {
+      "id": "str-12",
+      "type": "structural",
+      "subtype": "callees",
+      "query": "What does getMessages call?",
+      "gold": [
+        {
+          "file_path": "front/src/utils/HttpClient.js",
+          "start_line": 77,
+          "end_line": 96
+        },
+        {
+          "file_path": "front/src/actions/message.js",
+          "start_line": 8,
+          "end_line": 8
+        },
+        {
+          "file_path": "front/src/actions/message.js",
+          "start_line": 12,
+          "end_line": 19
+        }
+      ],
+      "source": "get_callees (resolved targets)",
+      "set": "original"
+    },
+    {
+      "id": "use-01",
+      "type": "usage",
+      "subtype": "deeplink",
+      "query": "Where is the mqtt setup page deeplink used?",
+      "gold": [
+        {
+          "file_path": "front/src/components/app.jsx",
+          "start_line": 331,
+          "end_line": 331
+        },
+        {
+          "file_path": "front/src/routes/integration/all/mqtt/MqttPage.js",
+          "start_line": 33,
+          "end_line": 33
+        },
+        {
+          "file_path": "front/src/routes/integration/all/mqtt/commons/CheckMqttPanel.js",
+          "start_line": 29,
+          "end_line": 29
+        }
+      ],
+      "source": "catalog front_route /dashboard/integration/device/mqtt/setup (MqttSetupPage)",
+      "set": "original"
+    },
+    {
+      "id": "use-02",
+      "type": "usage",
+      "subtype": "deeplink",
+      "query": "Where is the matter settings page deeplink used?",
+      "gold": [
+        {
+          "file_path": "front/src/components/app.jsx",
+          "start_line": 390,
+          "end_line": 390
+        },
+        {
+          "file_path": "front/src/routes/integration/all/matter/MatterPage.jsx",
+          "start_line": 26,
+          "end_line": 26
+        }
+      ],
+      "source": "catalog front_route /dashboard/integration/device/matter/settings (MatterSettingsPage)",
+      "set": "original"
+    },
+    {
+      "id": "use-03",
+      "type": "usage",
+      "subtype": "deeplink",
+      "query": "Where is the edit scene page deeplink used?",
+      "gold": [
+        {
+          "file_path": "front/src/actions/createScene.js",
+          "start_line": 38,
+          "end_line": 38
+        },
+        {
+          "file_path": "front/src/components/app.jsx",
+          "start_line": 444,
+          "end_line": 444
+        },
+        {
+          "file_path": "front/src/routes/scene/SceneCard.jsx",
+          "start_line": 30,
+          "end_line": 30
+        },
+        {
+          "file_path": "front/src/routes/scene/SceneCard.jsx",
+          "start_line": 33,
+          "end_line": 33
+        },
+        {
+          "file_path": "front/src/routes/scene/SceneCard.jsx",
+          "start_line": 74,
+          "end_line": 74
+        },
+        {
+          "file_path": "front/src/routes/scene/duplicate-scene/index.js",
+          "start_line": 11,
+          "end_line": 11
+        },
+        {
+          "file_path": "front/src/routes/scene/duplicate-scene/index.js",
+          "start_line": 43,
+          "end_line": 43
+        }
+      ],
+      "source": "catalog front_route /dashboard/scene/:scene_selector (EditScenePage)",
+      "set": "original"
+    },
+    {
+      "id": "use-04",
+      "type": "usage",
+      "subtype": "deeplink",
+      "query": "Where is the external integration device page deeplink used?",
+      "gold": [
+        {
+          "file_path": "front/src/components/app.jsx",
+          "start_line": 417,
+          "end_line": 417
+        },
+        {
+          "file_path": "front/src/routes/devices/integrationLinks.js",
+          "start_line": 51,
+          "end_line": 51
+        },
+        {
+          "file_path": "front/src/routes/integration/all/external-integration/ExternalIntegrationPage.jsx",
+          "start_line": 45,
+          "end_line": 45
+        },
+        {
+          "file_path": "front/src/routes/integration/all/external-integration/install-from-github/InstallFromGithubCard.jsx",
+          "start_line": 58,
+          "end_line": 58
+        },
+        {
+          "file_path": "front/src/routes/integration/all/external-integration/install-page/index.js",
+          "start_line": 117,
+          "end_line": 117
+        },
+        {
+          "file_path": "front/src/routes/integration/all/external-integration/install-page/index.js",
+          "start_line": 323,
+          "end_line": 323
+        },
+        {
+          "file_path": "front/src/routes/integration/index.js",
+          "start_line": 288,
+          "end_line": 288
+        }
+      ],
+      "source": "catalog front_route /dashboard/integration/device/external/:selector (ExternalIntegrationDevicePage)",
+      "set": "original"
+    },
+    {
+      "id": "use-05",
+      "type": "usage",
+      "subtype": "event",
+      "query": "Where is EVENTS.USER_PRESENCE.BACK_HOME used?",
+      "gold": [
+        {
+          "file_path": "front/src/routes/scene/edit-scene/TriggerCard.jsx",
+          "start_line": 153,
+          "end_line": 153
+        },
+        {
+          "file_path": "front/src/routes/scene/edit-scene/summary.js",
+          "start_line": 202,
+          "end_line": 202
+        },
+        {
+          "file_path": "front/src/routes/scene/edit-scene/triggers/UserPresenceTrigger.jsx",
+          "start_line": 90,
+          "end_line": 90
+        },
+        {
+          "file_path": "front/src/routes/scene/edit-scene/typesCatalog.js",
+          "start_line": 54,
+          "end_line": 54
+        },
+        {
+          "file_path": "front/src/routes/scene/edit-scene/typesCatalog.js",
+          "start_line": 176,
+          "end_line": 176
+        },
+        {
+          "file_path": "server/lib/house/house.userSeen.js",
+          "start_line": 51,
+          "end_line": 51
+        },
+        {
+          "file_path": "server/lib/scene/scene.triggers.js",
+          "start_line": 171,
+          "end_line": 171
+        },
+        {
+          "file_path": "server/services/mcp/lib/sceneSchemas.js",
+          "start_line": 24,
+          "end_line": 24
+        },
+        {
+          "file_path": "server/services/mcp/lib/sceneSchemas.js",
+          "start_line": 561,
+          "end_line": 561
+        },
+        {
+          "file_path": "server/utils/constants.js",
+          "start_line": 574,
+          "end_line": 574
+        }
+      ],
+      "source": "catalog event EVENTS.USER_PRESENCE.BACK_HOME",
+      "set": "original"
+    },
+    {
+      "id": "use-06",
+      "type": "usage",
+      "subtype": "event",
+      "query": "Where is EVENTS.ALARM.PANIC used?",
+      "gold": [
+        {
+          "file_path": "front/src/routes/scene/edit-scene/TriggerCard.jsx",
+          "start_line": 35,
+          "end_line": 35
+        },
+        {
+          "file_path": "front/src/routes/scene/edit-scene/summary.js",
+          "start_line": 215,
+          "end_line": 215
+        },
+        {
+          "file_path": "front/src/routes/scene/edit-scene/typesCatalog.js",
+          "start_line": 65,
+          "end_line": 65
+        },
+        {
+          "file_path": "front/src/routes/scene/edit-scene/typesCatalog.js",
+          "start_line": 192,
+          "end_line": 192
+        },
+        {
+          "file_path": "server/lib/house/house.panic.js",
+          "start_line": 32,
+          "end_line": 32
+        },
+        {
+          "file_path": "server/lib/scene/scene.triggers.js",
+          "start_line": 185,
+          "end_line": 185
+        },
+        {
+          "file_path": "server/services/homekit/lib/notifyChange.js",
+          "start_line": 8,
+          "end_line": 8
+        },
+        {
+          "file_path": "server/services/mcp/lib/sceneSchemas.js",
+          "start_line": 34,
+          "end_line": 34
+        },
+        {
+          "file_path": "server/services/mcp/lib/sceneSchemas.js",
+          "start_line": 593,
+          "end_line": 593
+        },
+        {
+          "file_path": "server/utils/constants.js",
+          "start_line": 529,
+          "end_line": 529
+        }
+      ],
+      "source": "catalog event EVENTS.ALARM.PANIC",
+      "set": "original"
+    },
+    {
+      "id": "use-07",
+      "type": "usage",
+      "subtype": "event",
+      "query": "Where is the websocket send event emitted or handled?",
+      "gold": [
+        {
+          "file_path": "server/api/websockets/index.js",
+          "start_line": 10,
+          "end_line": 10
+        },
+        {
+          "file_path": "server/lib/gateway/gateway.forwardMessageToAiChat.js",
+          "start_line": 479,
+          "end_line": 479
+        },
+        {
+          "file_path": "server/lib/gateway/gateway.forwardMessageToAiChat.js",
+          "start_line": 821,
+          "end_line": 821
+        },
+        {
+          "file_path": "server/lib/gateway/gateway.processVoiceMessage.js",
+          "start_line": 40,
+          "end_line": 40
+        },
+        {
+          "file_path": "server/lib/gateway/index.js",
+          "start_line": 123,
+          "end_line": 123
+        },
+        {
+          "file_path": "server/lib/message/message.handleEvent.js",
+          "start_line": 12,
+          "end_line": 12
+        },
+        {
+          "file_path": "server/lib/message/message.reply.js",
+          "start_line": 74,
+          "end_line": 74
+        },
+        {
+          "file_path": "server/lib/message/message.sendToUser.js",
+          "start_line": 38,
+          "end_line": 38
+        },
+        {
+          "file_path": "server/utils/constants.js",
+          "start_line": 647,
+          "end_line": 647
+        }
+      ],
+      "source": "catalog event EVENTS.WEBSOCKET.SEND",
+      "set": "original"
+    },
+    {
+      "id": "use-08",
+      "type": "usage",
+      "subtype": "event",
+      "query": "Where is the user presence left home event emitted or handled?",
+      "gold": [
+        {
+          "file_path": "front/src/routes/scene/edit-scene/TriggerCard.jsx",
+          "start_line": 160,
+          "end_line": 160
+        },
+        {
+          "file_path": "front/src/routes/scene/edit-scene/summary.js",
+          "start_line": 203,
+          "end_line": 203
+        },
+        {
+          "file_path": "front/src/routes/scene/edit-scene/triggers/UserPresenceTrigger.jsx",
+          "start_line": 93,
+          "end_line": 93
+        },
+        {
+          "file_path": "front/src/routes/scene/edit-scene/typesCatalog.js",
+          "start_line": 55,
+          "end_line": 55
+        },
+        {
+          "file_path": "front/src/routes/scene/edit-scene/typesCatalog.js",
+          "start_line": 177,
+          "end_line": 177
+        },
+        {
+          "file_path": "server/lib/house/house.userLeft.js",
+          "start_line": 52,
+          "end_line": 52
+        },
+        {
+          "file_path": "server/lib/scene/scene.triggers.js",
+          "start_line": 173,
+          "end_line": 173
+        },
+        {
+          "file_path": "server/services/mcp/lib/sceneSchemas.js",
+          "start_line": 25,
+          "end_line": 25
+        },
+        {
+          "file_path": "server/services/mcp/lib/sceneSchemas.js",
+          "start_line": 564,
+          "end_line": 564
+        },
+        {
+          "file_path": "server/utils/constants.js",
+          "start_line": 573,
+          "end_line": 573
+        }
+      ],
+      "source": "catalog event EVENTS.USER_PRESENCE.LEFT_HOME",
+      "set": "original"
+    },
+    {
+      "id": "use-09",
+      "type": "usage",
+      "subtype": "api_route",
+      "query": "Where is the POST /api/v1/signup endpoint defined and called?",
+      "gold": [
+        {
+          "file_path": "front/src/routes/signup/2-create-account-local/index.js",
+          "start_line": 161,
+          "end_line": 161
+        },
+        {
+          "file_path": "server/api/routes.js",
+          "start_line": 107,
+          "end_line": 107
+        }
+      ],
+      "source": "catalog api_route POST /api/v1/signup",
+      "set": "original"
+    },
+    {
+      "id": "use-10",
+      "type": "usage",
+      "subtype": "api_route",
+      "query": "Where is the DELETE /api/v1/room/:room_selector endpoint defined and called?",
+      "gold": [
+        {
+          "file_path": "front/src/actions/house.js",
+          "start_line": 237,
+          "end_line": 237
+        },
+        {
+          "file_path": "server/api/routes.js",
+          "start_line": 512,
+          "end_line": 512
+        }
+      ],
+      "source": "catalog api_route DELETE /api/v1/room/:room_selector",
+      "set": "original"
+    },
+    {
+      "id": "use-11",
+      "type": "usage",
+      "subtype": "literal",
+      "query": "Where is the string 'cloud.assembled.specifications' used?",
+      "gold": [
+        {
+          "file_path": "front/src/routes/integration/all/tuya/discover-page/githubIssue.js",
+          "start_line": 164,
+          "end_line": 164
+        },
+        {
+          "file_path": "front/src/routes/integration/all/tuya/discover-page/githubIssue.js",
+          "start_line": 239,
+          "end_line": 239
+        }
+      ],
+      "source": "grep for the quoted literal",
+      "set": "original"
+    },
+    {
+      "id": "use-12",
+      "type": "usage",
+      "subtype": "literal",
+      "query": "Where is the string 'birthdateMonth' used?",
+      "gold": [
+        {
+          "file_path": "front/src/routes/profile/index.js",
+          "start_line": 31,
+          "end_line": 31
+        },
+        {
+          "file_path": "front/src/routes/settings/settings-users/create-user/index.js",
+          "start_line": 39,
+          "end_line": 39
+        },
+        {
+          "file_path": "front/src/routes/settings/settings-users/edit-user/index.js",
+          "start_line": 37,
+          "end_line": 37
+        }
+      ],
+      "source": "grep for the quoted literal",
+      "set": "original"
+    }
+  ]
+}

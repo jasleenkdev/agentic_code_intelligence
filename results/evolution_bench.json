@@ -1,0 +1,83 @@
+{
+  "model": "qwen3-emb-0.6b",
+  "entries": 15000,
+  "unique_texts": 8824,
+  "encode_s": 0.0,
+  "lineage_s": 5.7,
+  "lineages_inferred": 5317,
+  "lineages_true": 5000,
+  "grouping": {
+    "pair_precision": 0.8798,
+    "pair_recall": 0.9409
+  },
+  "params": {
+    "cos_min": 0.9,
+    "jaccard_min": 0.3
+  },
+  "sets": {
+    "dev-tune": {
+      "flat": {
+        "ndcg@10": 0.6531921148216779,
+        "ndcg@10_dedup": 0.5418885777217565,
+        "exact_version@1": 0.40166666666666667,
+        "lineage_mrr@10": 0.6629464285714285,
+        "distinct_lineages@10": 4.443333333333333
+      },
+      "flat+strip": {
+        "ndcg@10": 0.657650592371668,
+        "ndcg@10_dedup": 0.5458288843725273,
+        "exact_version@1": 0.4066666666666667,
+        "lineage_mrr@10": 0.6654411375661375,
+        "distinct_lineages@10": 4.421666666666667
+      },
+      "lineage": {
+        "ndcg@10": 0.4188789819982037,
+        "ndcg@10_dedup": 0.7208350534990994,
+        "exact_version@1": 0.5883333333333334,
+        "lineage_mrr@10": 0.7039623015873017,
+        "distinct_lineages@10": 9.93,
+        "collapse_ms_per_query": 1.55
+      },
+      "lineage-oracle": {
+        "ndcg@10": 0.4236184415956071,
+        "ndcg@10_dedup": 0.7335050789546141,
+        "exact_version@1": 0.5916666666666667,
+        "lineage_mrr@10": 0.7100476190476191,
+        "distinct_lineages@10": 10.0,
+        "collapse_ms_per_query": 1.52
+      }
+    },
+    "dev-holdout": {
+      "flat": {
+        "ndcg@10": 0.6695391818735809,
+        "ndcg@10_dedup": 0.5595148513816179,
+        "exact_version@1": 0.41333333333333333,
+        "lineage_mrr@10": 0.6900978835978836,
+        "distinct_lineages@10": 4.453333333333333
+      },
+      "flat+strip": {
+        "ndcg@10": 0.6721814885943144,
+        "ndcg@10_dedup": 0.5604140301261022,
+        "exact_version@1": 0.415,
+        "lineage_mrr@10": 0.6914292328042329,
+        "distinct_lineages@10": 4.458333333333333
+      },
+      "lineage": {
+        "ndcg@10": 0.43274068494216683,
+        "ndcg@10_dedup": 0.7383046678205705,
+        "exact_version@1": 0.6083333333333333,
+        "lineage_mrr@10": 0.724834656084656,
+        "distinct_lineages@10": 9.946666666666667,
+        "collapse_ms_per_query": 1.51
+      },
+      "lineage-oracle": {
+        "ndcg@10": 0.4346471533675425,
+        "ndcg@10_dedup": 0.7459977228281651,
+        "exact_version@1": 0.61,
+        "lineage_mrr@10": 0.727005291005291,
+        "distinct_lineages@10": 10.0,
+        "collapse_ms_per_query": 1.51
+      }
+    }
+  }
+}

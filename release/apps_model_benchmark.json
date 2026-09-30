@@ -1,0 +1,212 @@
+[
+  {
+    "model": "bge-small",
+    "model_id": "BAAI/bge-small-en-v1.5",
+    "params_m": 33,
+    "licence": "MIT",
+    "max_seq": 512,
+    "docs": 5000,
+    "doc_encode_s": 0.0,
+    "doc_encoded_now": 0,
+    "sets": {
+      "dev-tune": {
+        "ndcg@10": 0.06698836603222076,
+        "mrr@10": 0.05722354497354497,
+        "mrr@100": 0.06152521376115318,
+        "recall@1": 0.04,
+        "recall@10": 0.09833333333333333,
+        "recall@100": 0.23166666666666666,
+        "n": 600,
+        "query_encode_s": 0.0,
+        "query_encoded_now": 0
+      },
+      "dev-holdout": {
+        "ndcg@10": 0.07382081155276021,
+        "mrr@10": 0.061693783068783065,
+        "mrr@100": 0.06650227716067011,
+        "recall@1": 0.043333333333333335,
+        "recall@10": 0.11333333333333333,
+        "recall@100": 0.27,
+        "n": 600,
+        "query_encode_s": 24.9,
+        "query_encoded_now": 545
+      }
+    },
+    "total_s": 25.0
+  },
+  {
+    "model": "gte-modernbert",
+    "model_id": "Alibaba-NLP/gte-modernbert-base",
+    "params_m": 149,
+    "licence": "Apache-2.0",
+    "max_seq": 1024,
+    "docs": 5000,
+    "doc_encode_s": 364.5,
+    "doc_encoded_now": 4999,
+    "sets": {
+      "dev-tune": {
+        "ndcg@10": 0.5824642269542231,
+        "mrr@10": 0.5367374338624339,
+        "mrr@100": 0.5442778313598228,
+        "recall@1": 0.445,
+        "recall@10": 0.7266666666666667,
+        "recall@100": 0.9116666666666666,
+        "n": 600,
+        "query_encode_s": 111.4,
+        "query_encoded_now": 600
+      },
+      "dev-holdout": {
+        "ndcg@10": 0.5541992557043449,
+        "mrr@10": 0.5115879629629629,
+        "mrr@100": 0.5211163917315003,
+        "recall@1": 0.425,
+        "recall@10": 0.6883333333333334,
+        "recall@100": 0.915,
+        "n": 600,
+        "query_encode_s": 100.9,
+        "query_encoded_now": 600
+      }
+    },
+    "total_s": 576.9
+  },
+  {
+    "model": "coderankembed",
+    "model_id": "nomic-ai/CodeRankEmbed",
+    "params_m": 137,
+    "licence": "MIT",
+    "max_seq": 512,
+    "docs": 5000,
+    "doc_encode_s": 252.3,
+    "doc_encoded_now": 4999,
+    "sets": {
+      "dev-tune": {
+        "ndcg@10": 0.22947006620953275,
+        "mrr@10": 0.19976719576719576,
+        "mrr@100": 0.2105841318350308,
+        "recall@1": 0.14833333333333334,
+        "recall@10": 0.325,
+        "recall@100": 0.6283333333333333,
+        "n": 600,
+        "query_encode_s": 73.6,
+        "query_encoded_now": 600
+      },
+      "dev-holdout": {
+        "ndcg@10": 0.2555770438942285,
+        "mrr@10": 0.22336574074074075,
+        "mrr@100": 0.23304985208585008,
+        "recall@1": 0.16833333333333333,
+        "recall@10": 0.36,
+        "recall@100": 0.6233333333333333,
+        "n": 600,
+        "query_encode_s": 73.5,
+        "query_encoded_now": 600
+      }
+    },
+    "total_s": 399.5
+  },
+  {
+    "model": "granite-small-r2",
+    "model_id": "ibm-granite/granite-embedding-small-english-r2",
+    "params_m": 47,
+    "licence": "Apache-2.0",
+    "max_seq": 1024,
+    "docs": 5000,
+    "doc_encode_s": 105.1,
+    "doc_encoded_now": 4999,
+    "sets": {
+      "dev-tune": {
+        "ndcg@10": 0.14685420811513006,
+        "mrr@10": 0.12029166666666666,
+        "mrr@100": 0.12986407172835543,
+        "recall@1": 0.07833333333333334,
+        "recall@10": 0.23333333333333334,
+        "recall@100": 0.5083333333333333,
+        "n": 600,
+        "query_encode_s": 37.2,
+        "query_encoded_now": 600
+      },
+      "dev-holdout": {
+        "ndcg@10": 0.17057623961224663,
+        "mrr@10": 0.14645965608465605,
+        "mrr@100": 0.15547733154226476,
+        "recall@1": 0.10333333333333333,
+        "recall@10": 0.24833333333333332,
+        "recall@100": 0.515,
+        "n": 600,
+        "query_encode_s": 35.3,
+        "query_encoded_now": 600
+      }
+    },
+    "total_s": 177.7
+  },
+  {
+    "model": "qwen3-emb-0.6b",
+    "model_id": "Qwen/Qwen3-Embedding-0.6B",
+    "params_m": 596,
+    "licence": "Apache-2.0",
+    "max_seq": 1024,
+    "docs": 5000,
+    "doc_encode_s": 920.3,
+    "doc_encoded_now": 4999,
+    "sets": {
+      "dev-tune": {
+        "ndcg@10": 0.7573108786910098,
+        "mrr@10": 0.7136130952380952,
+        "mrr@100": 0.7180515321844119,
+        "recall@1": 0.62,
+        "recall@10": 0.8933333333333333,
+        "recall@100": 0.985,
+        "n": 600,
+        "query_encode_s": 416.6,
+        "query_encoded_now": 600
+      },
+      "dev-holdout": {
+        "ndcg@10": 0.7712106891969903,
+        "mrr@10": 0.7281501322751323,
+        "mrr@100": 0.7323688713862903,
+        "recall@1": 0.635,
+        "recall@10": 0.905,
+        "recall@100": 0.9916666666666667,
+        "n": 600,
+        "query_encode_s": 371.3,
+        "query_encoded_now": 600
+      }
+    },
+    "total_s": 1708.2
+  },
+  {
+    "model": "jina-code-0.5b",
+    "model_id": "jinaai/jina-code-embeddings-0.5b",
+    "params_m": 494,
+    "licence": "CC-BY-NC-4.0",
+    "max_seq": 1024,
+    "docs": 5000,
+    "doc_encode_s": 575.4,
+    "doc_encoded_now": 4999,
+    "sets": {
+      "dev-tune": {
+        "ndcg@10": 0.9586468131962664,
+        "mrr@10": 0.9469325396825397,
+        "mrr@100": 0.947086439518336,
+        "recall@1": 0.9133333333333333,
+        "recall@10": 0.9933333333333333,
+        "recall@100": 0.9983333333333333,
+        "n": 600,
+        "query_encode_s": 218.8,
+        "query_encoded_now": 600
+      },
+      "dev-holdout": {
+        "ndcg@10": 0.9776117569838476,
+        "mrr@10": 0.9699166666666665,
+        "mrr@100": 0.9699166666666665,
+        "recall@1": 0.9466666666666667,
+        "recall@10": 1.0,
+        "recall@100": 1.0,
+        "n": 600,
+        "query_encode_s": 212.5,
+        "query_encoded_now": 600
+      }
+    },
+    "total_s": 1006.9
+  }
+]

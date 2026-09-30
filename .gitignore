@@ -1,0 +1,49 @@
+# ---- Secrets ----
+.env
+.env.*
+!.env.example
+
+# ---- Target codebase (read-only input, cloned separately) ----
+sample_repo/
+
+# ---- Generated indexes / data ----
+index/
+data/
+.index_cache/
+*.duckdb
+*.sqlite3
+chroma/
+.chroma/
+faiss/
+
+# ---- Evaluation artifacts ----
+eval/runs/
+eval/results/
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ---- Node ----
+node_modules/
+npm-debug.log*
+.pnpm-store/
+
+# ---- Models / caches ----
+.cache/
+models/
+.hf_cache/
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

@@ -1,0 +1,582 @@
+{
+  "seed": 7,
+  "labels": "targets chosen programmatically; questions LLM-written and validated to share no identifier stem or doc-comment bigram with the target",
+  "model": "qwen2.5-coder:7b",
+  "queries": [
+    {
+      "id": "par-01",
+      "type": "semantic",
+      "set": "paraphrased",
+      "query": "How does this function remove a person from both the database and the current situation?",
+      "gold": [
+        {
+          "file_path": "server/lib/user/user.destroy.js",
+          "start_line": 13,
+          "end_line": 24
+        }
+      ],
+      "source": "paraphrase of JSDoc of destroy (LLM-written, lexically validated)",
+      "attempts": 2,
+      "forbidden_words": 13
+    },
+    {
+      "id": "par-02",
+      "type": "semantic",
+      "set": "paraphrased",
+      "query": "How does this function change the status of a task and optionally include additional information?",
+      "gold": [
+        {
+          "file_path": "server/lib/job/job.updateProgress.js",
+          "start_line": 17,
+          "end_line": 43
+        }
+      ],
+      "source": "paraphrase of JSDoc of updateProgress (LLM-written, lexically validated)",
+      "attempts": 2,
+      "forbidden_words": 32
+    },
+    {
+      "id": "par-03",
+      "type": "semantic",
+      "set": "paraphrased",
+      "query": "How does this function check if the smart home assistant is connected to the home automation system?",
+      "gold": [
+        {
+          "file_path": "server/lib/message/message.create.js",
+          "start_line": 11,
+          "end_line": 19
+        }
+      ],
+      "source": "paraphrase of JSDoc of isGladysPlusConfigured (LLM-written, lexically validated)",
+      "attempts": 3,
+      "forbidden_words": 24
+    },
+    {
+      "id": "par-04",
+      "type": "semantic",
+      "set": "paraphrased",
+      "query": "How does this function determine if two items are identical based on certain details?",
+      "gold": [
+        {
+          "file_path": "server/utils/objects.js",
+          "start_line": 10,
+          "end_line": 18
+        }
+      ],
+      "source": "paraphrase of JSDoc of areObjectsEqual (LLM-written, lexically validated)",
+      "attempts": 2,
+      "forbidden_words": 10
+    },
+    {
+      "id": "par-05",
+      "type": "semantic",
+      "set": "paraphrased",
+      "query": "How does this function convert an old-style layout to the new format based on parts?",
+      "gold": [
+        {
+          "file_path": "server/utils/dashboardSections.js",
+          "start_line": 51,
+          "end_line": 66
+        }
+      ],
+      "source": "paraphrase of JSDoc of normalizeDashboardBoxes (LLM-written, lexically validated)",
+      "attempts": 3,
+      "forbidden_words": 38
+    },
+    {
+      "id": "par-06",
+      "type": "semantic",
+      "set": "paraphrased",
+      "query": "How can I determine which activities are currently happening in my smart-home assistant?",
+      "gold": [
+        {
+          "file_path": "server/lib/scene/scene.getRunning.js",
+          "start_line": 7,
+          "end_line": 17
+        }
+      ],
+      "source": "paraphrase of JSDoc of getRunning (LLM-written, lexically validated)",
+      "attempts": 2,
+      "forbidden_words": 20
+    },
+    {
+      "id": "par-07",
+      "type": "semantic",
+      "set": "paraphrased",
+      "query": "How does this function generate a distinctive label for a new smart home device?",
+      "gold": [
+        {
+          "file_path": "front/src/actions/house.js",
+          "start_line": 26,
+          "end_line": 40
+        }
+      ],
+      "source": "paraphrase of JSDoc of getDefaultHouseName (LLM-written, lexically validated)",
+      "attempts": 2,
+      "forbidden_words": 27
+    },
+    {
+      "id": "par-08",
+      "type": "semantic",
+      "set": "paraphrased",
+      "query": "How does this function create a new identifier starting from a given point and make sure it hasn't been used in the system?",
+      "gold": [
+        {
+          "file_path": "server/utils/addSelector.js",
+          "start_line": 56,
+          "end_line": 87
+        }
+      ],
+      "source": "paraphrase of JSDoc of buildUniqueSelector (LLM-written, lexically validated)",
+      "attempts": 4,
+      "forbidden_words": 62
+    },
+    {
+      "id": "par-09",
+      "type": "semantic",
+      "set": "paraphrased",
+      "query": "How can this function run a program with arguments without using a command line?",
+      "gold": [
+        {
+          "file_path": "server/utils/childProcess.js",
+          "start_line": 41,
+          "end_line": 55
+        }
+      ],
+      "source": "paraphrase of JSDoc of execFile (LLM-written, lexically validated)",
+      "attempts": 3,
+      "forbidden_words": 45
+    },
+    {
+      "id": "par-10",
+      "type": "semantic",
+      "set": "paraphrased",
+      "query": "How does this function extract and validate a basic web address from a given text?",
+      "gold": [
+        {
+          "file_path": "server/utils/origin.js",
+          "start_line": 10,
+          "end_line": 27
+        }
+      ],
+      "source": "paraphrase of JSDoc of parseOrigin (LLM-written, lexically validated)",
+      "attempts": 2,
+      "forbidden_words": 20
+    },
+    {
+      "id": "par-11",
+      "type": "semantic",
+      "set": "paraphrased",
+      "query": "How does this function adjust figures for display in a home automation system?",
+      "gold": [
+        {
+          "file_path": "server/utils/units.js",
+          "start_line": 90,
+          "end_line": 107
+        }
+      ],
+      "source": "paraphrase of JSDoc of smartRound (LLM-written, lexically validated)",
+      "attempts": 4,
+      "forbidden_words": 21
+    },
+    {
+      "id": "par-12",
+      "type": "semantic",
+      "set": "paraphrased",
+      "query": "How does this function create a capability for a smart home accessory based on its wireless settings?",
+      "gold": [
+        {
+          "file_path": "server/services/zigbee2mqtt/utils/features/mapExpose.js",
+          "start_line": 11,
+          "end_line": 33
+        }
+      ],
+      "source": "paraphrase of JSDoc of mapExpose (LLM-written, lexically validated)",
+      "attempts": 3,
+      "forbidden_words": 50
+    },
+    {
+      "id": "par-13",
+      "type": "semantic",
+      "set": "paraphrased",
+      "query": "How does this function find an open connection on the host, avoiding those already in use?",
+      "gold": [
+        {
+          "file_path": "server/utils/getFreePort.js",
+          "start_line": 12,
+          "end_line": 29
+        }
+      ],
+      "source": "paraphrase of JSDoc of getFreePort (LLM-written, lexically validated)",
+      "attempts": 2,
+      "forbidden_words": 25
+    },
+    {
+      "id": "par-14",
+      "type": "semantic",
+      "set": "paraphrased",
+      "query": "What does this function do when a new smart bulb is added to the system?",
+      "gold": [
+        {
+          "file_path": "server/services/philips-hue/lib/light/light.postCreate.js",
+          "start_line": 11,
+          "end_line": 21
+        }
+      ],
+      "source": "paraphrase of JSDoc of postCreate (LLM-written, lexically validated)",
+      "attempts": 3,
+      "forbidden_words": 28
+    },
+    {
+      "id": "par-15",
+      "type": "semantic",
+      "set": "paraphrased",
+      "query": "How does this function keep track of wireless settings?",
+      "gold": [
+        {
+          "file_path": "server/services/bluetooth/lib/config/bluetooth.saveConfiguration.js",
+          "start_line": 12,
+          "end_line": 45
+        }
+      ],
+      "source": "paraphrase of JSDoc of saveConfiguration (LLM-written, lexically validated)",
+      "attempts": 3,
+      "forbidden_words": 42
+    },
+    {
+      "id": "par-16",
+      "type": "semantic",
+      "set": "paraphrased",
+      "query": "How does this function send a web query and deal with the answer?",
+      "gold": [
+        {
+          "file_path": "server/lib/http/http.request.js",
+          "start_line": 16,
+          "end_line": 37
+        }
+      ],
+      "source": "paraphrase of JSDoc of request (LLM-written, lexically validated)",
+      "attempts": 2,
+      "forbidden_words": 30
+    },
+    {
+      "id": "par-17",
+      "type": "semantic",
+      "set": "paraphrased",
+      "query": "How does this function find and use a data source to get information about current conditions?",
+      "gold": [
+        {
+          "file_path": "server/lib/weather/weather.get.js",
+          "start_line": 37,
+          "end_line": 91
+        }
+      ],
+      "source": "paraphrase of JSDoc of get (LLM-written, lexically validated)",
+      "attempts": 4,
+      "forbidden_words": 86
+    },
+    {
+      "id": "par-18",
+      "type": "semantic",
+      "set": "paraphrased",
+      "query": "How does this script identify and list available device types on a computer?",
+      "gold": [
+        {
+          "file_path": "server/lib/system/system.detectHardwareClasses.js",
+          "start_line": 17,
+          "end_line": 39
+        }
+      ],
+      "source": "paraphrase of JSDoc of detectHardwareClasses (LLM-written, lexically validated)",
+      "attempts": 2,
+      "forbidden_words": 35
+    },
+    {
+      "id": "par-19",
+      "type": "semantic",
+      "set": "paraphrased",
+      "query": "How do you delete an item based on a specific criterion?",
+      "gold": [
+        {
+          "file_path": "server/lib/calendar/calendar.destroyEvent.js",
+          "start_line": 10,
+          "end_line": 22
+        }
+      ],
+      "source": "paraphrase of JSDoc of destroyEvent (LLM-written, lexically validated)",
+      "attempts": 3,
+      "forbidden_words": 12
+    },
+    {
+      "id": "par-20",
+      "type": "semantic",
+      "set": "paraphrased",
+      "query": "How does this function change a setting on a smart home control?",
+      "gold": [
+        {
+          "file_path": "server/services/broadlink/lib/commands/broadlink.setValue.js",
+          "start_line": 13,
+          "end_line": 32
+        }
+      ],
+      "source": "paraphrase of JSDoc of setValue (LLM-written, lexically validated)",
+      "attempts": 5,
+      "forbidden_words": 31
+    }
+  ],
+  "rejected": [
+    {
+      "target": "server/lib/location/location.create.js:16",
+      "doc": "Save the location of the user.",
+      "question": "How does this function save a new place and alert other parts of the system about it?",
+      "attempts": 2,
+      "violations": [
+        "fidelity judge: question does not match the documented behaviour"
+      ]
+    },
+    {
+      "target": "server/services/free-mobile/index.js:15",
+      "doc": "This function starts the FreeMobile service. gladys.services.free-mobile.start();",
+      "question": "How does this code initiate the mobile service and make sure it has the right login details?",
+      "attempts": 6,
+      "violations": [
+        "mobile",
+        "service"
+      ]
+    },
+    {
+      "target": "server/services/node-red/lib/updateMajorVersion.js:12",
+      "doc": "Update Node-RED major version and recreate container if needed.",
+      "question": "How does this function upgrade the main version of Node-RED and restart the service if necessary?",
+      "attempts": 6,
+      "violations": [
+        "node",
+        "node red",
+        "red",
+        "service",
+        "version"
+      ]
+    },
+    {
+      "target": "server/services/tuya/lib/device/tuya.convertUnit.js:10",
+      "doc": "Convert Tuya unit into Gladys unit.",
+      "question": "How does this function convert temperature readings from Tuya format to Gladys format?",
+      "attempts": 6,
+      "violations": [
+        "convert",
+        "tuya"
+      ]
+    },
+    {
+      "target": "front/src/components/boxs/device-in-room/device-features/light/lightFeatures.js:207",
+      "doc": "Builds the gradient painted on a color temperature slider. The ends are derived from the feature bounds, so a feature in kelvins (cold at the top) and one in mireds (cold at the bottom) both get a gradient matching what the lamp will actually do.",
+      "question": "How does this function create a visual range for a temperature control based on specific limits?",
+      "attempts": 6,
+      "violations": [
+        "temperature"
+      ]
+    },
+    {
+      "target": "server/services/enedis/utils/queueWrapper.js:9",
+      "doc": "Wrap a function to be executed in the queue.",
+      "question": "How does this code ensure a function runs in a line and handles mistakes?",
+      "attempts": 2,
+      "violations": [
+        "fidelity judge: question does not match the documented behaviour"
+      ]
+    },
+    {
+      "target": "server/lib/room/room.create.js:14",
+      "doc": "Create a room in a house.",
+      "question": "How do you add a new space to an existing dwelling using this code?",
+      "attempts": 2,
+      "violations": [
+        "fidelity judge: question does not match the documented behaviour"
+      ]
+    },
+    {
+      "target": "server/services/nextcloud-talk/lib/message/message.new.js:12",
+      "doc": "Called when a new Nextcloud Talk message arrives.",
+      "question": "How does this function manage incoming chat messages from a Nextcloud Talk session?",
+      "attempts": 6,
+      "violations": [
+        "messages",
+        "nextcloud",
+        "nextcloud talk",
+        "talk"
+      ]
+    },
+    {
+      "target": "server/services/telegram/lib/message.connect.js:9",
+      "doc": "Connect telegram API.",
+      "question": "How does this function interact with a communication system and handle problems?",
+      "attempts": 3,
+      "violations": [
+        "fidelity judge: question does not match the documented behaviour"
+      ]
+    },
+    {
+      "target": "server/services/google-actions/lib/smarthome/googleActions.onSync.js:13",
+      "doc": "The function that will run for an SYNC request. It should return a valid response or a Promise that resolves to valid response.",
+      "question": "What does this function do when it receives an update command?",
+      "attempts": 3,
+      "violations": [
+        "fidelity judge: question does not match the documented behaviour"
+      ]
+    },
+    {
+      "target": "server/utils/coordinates.js:23",
+      "doc": "Calculate the distance between two points.",
+      "question": "How does this function determine the distance in kilometers between two geographical locations?",
+      "attempts": 6,
+      "violations": [
+        "between",
+        "distance"
+      ]
+    },
+    {
+      "target": "server/lib/dashboard/dashboard.getAsset.js:14",
+      "doc": "Get a dashboard image asset, as a data-URI-ready string.",
+      "question": "How can I obtain a dashboard image as a base64-encoded string?",
+      "attempts": 6,
+      "violations": [
+        "base64",
+        "dashboard",
+        "dashboard image",
+        "string"
+      ]
+    },
+    {
+      "target": "server/services/google-cast/lib/google_cast.setValue.js:14",
+      "doc": "Send the new device value over device protocol.",
+      "question": "How does this function adjust the sound level of a smart device and alert the user?",
+      "attempts": 6,
+      "violations": [
+        "device",
+        "level"
+      ]
+    },
+    {
+      "target": "server/config/brain/index.js:23",
+      "doc": "Return brain answer templates from configuration files.",
+      "question": "How does this code fetch answer templates from configuration files?",
+      "attempts": 6,
+      "violations": [
+        "answer",
+        "answer templates",
+        "configuration files",
+        "files"
+      ]
+    },
+    {
+      "target": "server/services/ecowatt/index.js:35",
+      "doc": "Return ecowatt data formatted.",
+      "question": "How does this function retrieve and present energy usage information for the current and next day?",
+      "attempts": 6,
+      "violations": [
+        "day"
+      ]
+    },
+    {
+      "target": "server/lib/energy-price/price.getDefaultElectricMeterFeatureId.js:10",
+      "doc": "Get default electric meter device.",
+      "question": "How does this function find the default electricity meter's unique identifier?",
+      "attempts": 6,
+      "violations": [
+        "meter"
+      ]
+    },
+    {
+      "target": "server/utils/readChunk.js:19",
+      "doc": "Read one chunk of a file.",
+      "question": "How does this function access a particular segment of a document?",
+      "attempts": 2,
+      "violations": [
+        "fidelity judge: question does not match the documented behaviour"
+      ]
+    },
+    {
+      "target": "front/src/routes/scene/runningInfo.js:11",
+      "doc": "Compute how many instances of a scene are currently running and for how long the oldest one has been executing.",
+      "question": "How many times has a specific scene been triggered, and how long has the longest-running instance been active?",
+      "attempts": 6,
+      "violations": [
+        "instance",
+        "running",
+        "scene",
+        "times"
+      ]
+    },
+    {
+      "target": "server/lib/variable/variable.setValue.js:15",
+      "doc": "Set the value of a variable.",
+      "question": "How does this function keep track of a data point and handle special cases like a local identifier and time zone?",
+      "attempts": 4,
+      "violations": [
+        "fidelity judge: question does not match the documented behaviour"
+      ]
+    },
+    {
+      "target": "server/services/netatmo/lib/device/netatmo.updateNRV.js:12",
+      "doc": "Save values of valves NRV.",
+      "question": "What does this function do with the smart home device's capabilities and conditions?",
+      "attempts": 6,
+      "violations": [
+        "device"
+      ]
+    },
+    {
+      "target": "server/services/sonos/lib/sonos.onAvTransportEvent.js:14",
+      "doc": "When the playback state change.",
+      "question": "What does this function do when the audio on a wireless speaker changes?",
+      "attempts": 3,
+      "violations": [
+        "fidelity judge: question does not match the documented behaviour"
+      ]
+    },
+    {
+      "target": "server/services/lan-manager/lib/lan-manager.stop.js:8",
+      "doc": "Stop LAN manager. lanManager.stop();",
+      "question": "How does this function halt the network search and remove any associated listening services?",
+      "attempts": 6,
+      "violations": [
+        "listening",
+        "remove",
+        "services"
+      ]
+    },
+    {
+      "target": "server/utils/resizeImage.js:56",
+      "doc": "Resize an image buffer and return it as a JPEG data URI without the data: prefix.",
+      "question": "How can I transform an image buffer into JPEG data without the data: prefix?",
+      "attempts": 6,
+      "violations": [
+        "buffer",
+        "data prefix",
+        "image",
+        "image buffer",
+        "jpeg",
+        "jpeg data",
+        "without"
+      ]
+    },
+    {
+      "target": "server/lib/session/session.getAccessToken.js:16",
+      "doc": "Create and save in database a refresh_token.",
+      "question": "How does this function create and save a new authorization code in the database?",
+      "attempts": 2,
+      "violations": [
+        "fidelity judge: question does not match the documented behaviour"
+      ]
+    },
+    {
+      "target": "server/utils/functionsWrapper.js:10",
+      "doc": "Wrap a function used to receive an event in a try catch with logging.",
+      "question": "What does this code do?",
+      "attempts": 6,
+      "violations": [
+        "length 5 words"
+      ]
+    }
+  ]
+}

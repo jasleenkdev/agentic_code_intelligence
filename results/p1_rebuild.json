@@ -1,0 +1,84 @@
+{
+  "model": "gte-modernbert",
+  "machine": "Apple M1 Pro, CPU only",
+  "rows": [
+    {
+      "library": "gladys",
+      "version": "v5.0.4",
+      "build": "full",
+      "snippets": 6424,
+      "files_parsed": 2152,
+      "files_reused": 0,
+      "encoded": 6422,
+      "reused_embeddings": 2,
+      "chunk_s": 2.0,
+      "encode_s": 468.1,
+      "total_s": 470.2
+    },
+    {
+      "library": "gladys",
+      "version": "v5.1.0",
+      "build": "incremental",
+      "snippets": 6642,
+      "files_parsed": 146,
+      "files_reused": 2041,
+      "encoded": 394,
+      "reused_embeddings": 6248,
+      "chunk_s": 0.52,
+      "encode_s": 50.0,
+      "total_s": 50.8
+    },
+    {
+      "library": "gladys",
+      "version": "v5.1.1",
+      "build": "incremental",
+      "snippets": 6642,
+      "files_parsed": 1,
+      "files_reused": 2186,
+      "encoded": 1,
+      "reused_embeddings": 6641,
+      "chunk_s": 0.13,
+      "encode_s": 0.4,
+      "total_s": 0.8
+    },
+    {
+      "library": "apps-derived",
+      "version": "v1",
+      "build": "full",
+      "snippets": 2000,
+      "files_parsed": null,
+      "files_reused": null,
+      "encoded": 2000,
+      "reused_embeddings": 0,
+      "chunk_s": 0.0,
+      "encode_s": 154.2,
+      "total_s": 154.3
+    },
+    {
+      "library": "apps-derived",
+      "version": "v2",
+      "build": "incremental",
+      "snippets": 2000,
+      "files_parsed": null,
+      "files_reused": null,
+      "encoded": 176,
+      "reused_embeddings": 1824,
+      "chunk_s": 0.0,
+      "encode_s": 15.9,
+      "total_s": 16.0
+    },
+    {
+      "library": "apps-derived",
+      "version": "v3",
+      "build": "incremental",
+      "snippets": 2000,
+      "files_parsed": null,
+      "files_reused": null,
+      "encoded": 23,
+      "reused_embeddings": 1977,
+      "chunk_s": 0.0,
+      "encode_s": 3.7,
+      "total_s": 3.8
+    }
+  ]
+}

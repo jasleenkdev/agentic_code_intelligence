@@ -1,0 +1,782 @@
+[
+  {
+    "name": "bge-small raw",
+    "note": "small general embedder, raw text",
+    "config": {
+      "models": [
+        [
+          "bge-small",
+          1.0
+        ]
+      ],
+      "query_views": [
+        [
+          "raw",
+          1.0
+        ]
+      ],
+      "snippet_view": "raw",
+      "first_pass_k": 100,
+      "w_literal": 0.0,
+      "w_bm25": 0.0,
+      "w_style": 0.0,
+      "w_hub": 0.0,
+      "hub_k": 10,
+      "top_k": 100
+    },
+    "sets": {
+      "dev-tune": {
+        "ndcg@10": 0.06698836603222076,
+        "mrr@10": 0.05722354497354497,
+        "mrr@100": 0.06152521376115318,
+        "recall@1": 0.04,
+        "recall@10": 0.09833333333333333,
+        "recall@100": 0.23166666666666666,
+        "n": 600,
+        "rank_ms_per_query": 3.3767603465821594
+      },
+      "dev-holdout": {
+        "ndcg@10": 0.07382081155276021,
+        "mrr@10": 0.061693783068783065,
+        "mrr@100": 0.06650227716067011,
+        "recall@1": 0.043333333333333335,
+        "recall@10": 0.11333333333333333,
+        "recall@100": 0.27,
+        "n": 600,
+        "rank_ms_per_query": 3.283809304703027
+      }
+    }
+  },
+  {
+    "name": "gte-modernbert raw",
+    "note": "149M general embedder, raw text",
+    "config": {
+      "models": [
+        [
+          "gte-modernbert",
+          1.0
+        ]
+      ],
+      "query_views": [
+        [
+          "raw",
+          1.0
+        ]
+      ],
+      "snippet_view": "raw",
+      "first_pass_k": 100,
+      "w_literal": 0.0,
+      "w_bm25": 0.0,
+      "w_style": 0.0,
+      "w_hub": 0.0,
+      "hub_k": 10,
+      "top_k": 100
+    },
+    "sets": {
+      "dev-tune": {
+        "ndcg@10": 0.5824642269542231,
+        "mrr@10": 0.5367374338624339,
+        "mrr@100": 0.5442778313598228,
+        "recall@1": 0.445,
+        "recall@10": 0.7266666666666667,
+        "recall@100": 0.9116666666666666,
+        "n": 600,
+        "rank_ms_per_query": 3.350050416386997
+      },
+      "dev-holdout": {
+        "ndcg@10": 0.5541992557043449,
+        "mrr@10": 0.5115879629629629,
+        "mrr@100": 0.5211163917315003,
+        "recall@1": 0.425,
+        "recall@10": 0.6883333333333334,
+        "recall@100": 0.915,
+        "n": 600,
+        "rank_ms_per_query": 3.316055416750411
+      }
+    }
+  },
+  {
+    "name": "q0 qwen3 raw",
+    "note": "proxy model (uncontaminated), raw text, cosine only",
+    "config": {
+      "models": [
+        [
+          "qwen3-emb-0.6b",
+          1.0
+        ]
+      ],
+      "query_views": [
+        [
+          "raw",
+          1.0
+        ]
+      ],
+      "snippet_view": "raw",
+      "first_pass_k": 100,
+      "w_literal": 0.0,
+      "w_bm25": 0.0,
+      "w_style": 0.0,
+      "w_hub": 0.0,
+      "hub_k": 10,
+      "top_k": 100
+    },
+    "sets": {
+      "dev-tune": {
+        "ndcg@10": 0.7573108786910098,
+        "mrr@10": 0.7136130952380952,
+        "mrr@100": 0.7180515321844119,
+        "recall@1": 0.62,
+        "recall@10": 0.8933333333333333,
+        "recall@100": 0.985,
+        "n": 600,
+        "rank_ms_per_query": 3.5475232634538165
+      },
+      "dev-holdout": {
+        "ndcg@10": 0.7712106891969903,
+        "mrr@10": 0.7281501322751323,
+        "mrr@100": 0.7323688713862903,
+        "recall@1": 0.635,
+        "recall@10": 0.905,
+        "recall@100": 0.9916666666666667,
+        "n": 600,
+        "rank_ms_per_query": 3.2096175003486374
+      }
+    }
+  },
+  {
+    "name": "q1 +clean",
+    "note": "q0 + LaTeX/boilerplate-cleaned query",
+    "config": {
+      "models": [
+        [
+          "qwen3-emb-0.6b",
+          1.0
+        ]
+      ],
+      "query_views": [
+        [
+          "full",
+          1.0
+        ]
+      ],
+      "snippet_view": "raw",
+      "first_pass_k": 100,
+      "w_literal": 0.0,
+      "w_bm25": 0.0,
+      "w_style": 0.0,
+      "w_hub": 0.0,
+      "hub_k": 10,
+      "top_k": 100
+    },
+    "sets": {
+      "dev-tune": {
+        "ndcg@10": 0.7585960210487597,
+        "mrr@10": 0.7151362433862434,
+        "mrr@100": 0.7195072156576671,
+        "recall@1": 0.62,
+        "recall@10": 0.8933333333333333,
+        "recall@100": 0.985,
+        "n": 600,
+        "rank_ms_per_query": 3.3826343750115484
+      },
+      "dev-holdout": {
+        "ndcg@10": 0.7803828422007827,
+        "mrr@10": 0.7411871693121693,
+        "mrr@100": 0.745590724543496,
+        "recall@1": 0.6566666666666666,
+        "recall@10": 0.9016666666666666,
+        "recall@100": 0.99,
+        "n": 600,
+        "rank_ms_per_query": 3.2957643751675882
+      }
+    }
+  },
+  {
+    "name": "q1b +2 views",
+    "note": "q1 + second view without examples (not kept: +0.0001 tune, \u22120.004 holdout)",
+    "config": {
+      "models": [
+        [
+          "qwen3-emb-0.6b",
+          1.0
+        ]
+      ],
+      "query_views": [
+        [
+          "full",
+          1.0
+        ],
+        [
+          "no_examples",
+          1.0
+        ]
+      ],
+      "snippet_view": "raw",
+      "first_pass_k": 100,
+      "w_literal": 0.0,
+      "w_bm25": 0.0,
+      "w_style": 0.0,
+      "w_hub": 0.0,
+      "hub_k": 10,
+      "top_k": 100
+    },
+    "sets": {
+      "dev-tune": {
+        "ndcg@10": 0.7586501175209783,
+        "mrr@10": 0.7185251322751324,
+        "mrr@100": 0.7237578265057348,
+        "recall@1": 0.6266666666666667,
+        "recall@10": 0.8816666666666667,
+        "recall@100": 0.9816666666666667,
+        "n": 600,
+        "rank_ms_per_query": 3.5070677780701467
+      },
+      "dev-holdout": {
+        "ndcg@10": 0.7764143884084926,
+        "mrr@10": 0.7373399470899471,
+        "mrr@100": 0.7418314007029088,
+        "recall@1": 0.6583333333333333,
+        "recall@10": 0.8983333333333333,
+        "recall@100": 0.9933333333333333,
+        "n": 600,
+        "rank_ms_per_query": 3.548266041713456
+      }
+    }
+  },
+  {
+    "name": "q1c no examples",
+    "note": "q1 but examples dropped from the query (hurts)",
+    "config": {
+      "models": [
+        [
+          "qwen3-emb-0.6b",
+          1.0
+        ]
+      ],
+      "query_views": [
+        [
+          "no_examples",
+          1.0
+        ]
+      ],
+      "snippet_view": "raw",
+      "first_pass_k": 100,
+      "w_literal": 0.0,
+      "w_bm25": 0.0,
+      "w_style": 0.0,
+      "w_hub": 0.0,
+      "hub_k": 10,
+      "top_k": 100
+    },
+    "sets": {
+      "dev-tune": {
+        "ndcg@10": 0.7503669118945289,
+        "mrr@10": 0.7079794973544973,
+        "mrr@100": 0.7126025992814998,
+        "recall@1": 0.6166666666666667,
+        "recall@10": 0.8816666666666667,
+        "recall@100": 0.98,
+        "n": 600,
+        "rank_ms_per_query": 3.4106093749869615
+      },
+      "dev-holdout": {
+        "ndcg@10": 0.7651173169968735,
+        "mrr@10": 0.7265291005291005,
+        "mrr@100": 0.7311109641028987,
+        "recall@1": 0.65,
+        "recall@10": 0.8866666666666667,
+        "recall@100": 0.9866666666666667,
+        "n": 600,
+        "rank_ms_per_query": 3.3570928464177996
+      }
+    }
+  },
+  {
+    "name": "q1d normalised code",
+    "note": "q1 with comment/docstring-free snippets (mixed: \u22120.0015 with two views in the sweep; within noise, not adopted)",
+    "config": {
+      "models": [
+        [
+          "qwen3-emb-0.6b",
+          1.0
+        ]
+      ],
+      "query_views": [
+        [
+          "full",
+          1.0
+        ]
+      ],
+      "snippet_view": "normalised",
+      "first_pass_k": 100,
+      "w_literal": 0.0,
+      "w_bm25": 0.0,
+      "w_style": 0.0,
+      "w_hub": 0.0,
+      "hub_k": 10,
+      "top_k": 100
+    },
+    "sets": {
+      "dev-tune": {
+        "ndcg@10": 0.7630429878664696,
+        "mrr@10": 0.7203902116402117,
+        "mrr@100": 0.7248324175924858,
+        "recall@1": 0.625,
+        "recall@10": 0.895,
+        "recall@100": 0.9866666666666667,
+        "n": 600,
+        "rank_ms_per_query": 3.3903296516897776
+      },
+      "dev-holdout": {
+        "ndcg@10": 0.7827758826861989,
+        "mrr@10": 0.7441488095238095,
+        "mrr@100": 0.7485182083294061,
+        "recall@1": 0.6616666666666666,
+        "recall@10": 0.9033333333333333,
+        "recall@100": 0.99,
+        "n": 600,
+        "rank_ms_per_query": 3.2861078468461833
+      }
+    }
+  },
+  {
+    "name": "q2 +style",
+    "note": "q1 + program-style agreement (w 0.5)",
+    "config": {
+      "models": [
+        [
+          "qwen3-emb-0.6b",
+          1.0
+        ]
+      ],
+      "query_views": [
+        [
+          "full",
+          1.0
+        ]
+      ],
+      "snippet_view": "raw",
+      "first_pass_k": 100,
+      "w_literal": 0.0,
+      "w_bm25": 0.0,
+      "w_style": 0.5,
+      "w_hub": 0.0,
+      "hub_k": 10,
+      "top_k": 100
+    },
+    "sets": {
+      "dev-tune": {
+        "ndcg@10": 0.7642915803425896,
+        "mrr@10": 0.7210284391534392,
+        "mrr@100": 0.7252991326570465,
+        "recall@1": 0.6266666666666667,
+        "recall@10": 0.8983333333333333,
+        "recall@100": 0.985,
+        "n": 600,
+        "rank_ms_per_query": 3.3906064582212516
+      },
+      "dev-holdout": {
+        "ndcg@10": 0.7847242613674846,
+        "mrr@10": 0.7456388888888889,
+        "mrr@100": 0.7500808877270518,
+        "recall@1": 0.6583333333333333,
+        "recall@10": 0.905,
+        "recall@100": 0.99,
+        "n": 600,
+        "rank_ms_per_query": 3.3329777085843184
+      }
+    }
+  },
+  {
+    "name": "q3 +literal",
+    "note": "q2 + shared-literal overlap (w 0.1)",
+    "config": {
+      "models": [
+        [
+          "qwen3-emb-0.6b",
+          1.0
+        ]
+      ],
+      "query_views": [
+        [
+          "full",
+          1.0
+        ]
+      ],
+      "snippet_view": "raw",
+      "first_pass_k": 100,
+      "w_literal": 0.1,
+      "w_bm25": 0.0,
+      "w_style": 0.5,
+      "w_hub": 0.0,
+      "hub_k": 10,
+      "top_k": 100
+    },
+    "sets": {
+      "dev-tune": {
+        "ndcg@10": 0.7675344634983591,
+        "mrr@10": 0.7251097883597882,
+        "mrr@100": 0.7293322409323104,
+        "recall@1": 0.63,
+        "recall@10": 0.8983333333333333,
+        "recall@100": 0.985,
+        "n": 600,
+        "rank_ms_per_query": 4.331767778688421
+      },
+      "dev-holdout": {
+        "ndcg@10": 0.7877378254165003,
+        "mrr@10": 0.7491825396825397,
+        "mrr@100": 0.7535208078607186,
+        "recall@1": 0.665,
+        "recall@10": 0.9066666666666666,
+        "recall@100": 0.99,
+        "n": 600,
+        "rank_ms_per_query": 4.075635556752483
+      }
+    }
+  },
+  {
+    "name": "q4 +hubness",
+    "note": "q3 + snippet-side hubness penalty (w 0.125)",
+    "config": {
+      "models": [
+        [
+          "qwen3-emb-0.6b",
+          1.0
+        ]
+      ],
+      "query_views": [
+        [
+          "full",
+          1.0
+        ]
+      ],
+      "snippet_view": "raw",
+      "first_pass_k": 100,
+      "w_literal": 0.1,
+      "w_bm25": 0.0,
+      "w_style": 0.5,
+      "w_hub": 0.125,
+      "hub_k": 10,
+      "top_k": 100
+    },
+    "sets": {
+      "dev-tune": {
+        "ndcg@10": 0.7729239923781412,
+        "mrr@10": 0.7322440476190476,
+        "mrr@100": 0.7366194507689822,
+        "recall@1": 0.64,
+        "recall@10": 0.8983333333333333,
+        "recall@100": 0.985,
+        "n": 600,
+        "rank_ms_per_query": 4.176957916934043
+      },
+      "dev-holdout": {
+        "ndcg@10": 0.7898623135609458,
+        "mrr@10": 0.750542328042328,
+        "mrr@100": 0.7545507540765332,
+        "recall@1": 0.665,
+        "recall@10": 0.9116666666666666,
+        "recall@100": 0.9916666666666667,
+        "n": 600,
+        "rank_ms_per_query": 4.085401596967131
+      }
+    }
+  },
+  {
+    "name": "q5 +bm25 = half knobs",
+    "note": "q4 + BM25 (w 0.025)",
+    "config": {
+      "models": [
+        [
+          "qwen3-emb-0.6b",
+          1.0
+        ]
+      ],
+      "query_views": [
+        [
+          "full",
+          1.0
+        ]
+      ],
+      "snippet_view": "raw",
+      "first_pass_k": 100,
+      "w_literal": 0.1,
+      "w_bm25": 0.025,
+      "w_style": 0.5,
+      "w_hub": 0.125,
+      "hub_k": 10,
+      "top_k": 100
+    },
+    "sets": {
+      "dev-tune": {
+        "ndcg@10": 0.7748421776647821,
+        "mrr@10": 0.7343478835978836,
+        "mrr@100": 0.7385057944817458,
+        "recall@1": 0.645,
+        "recall@10": 0.9,
+        "recall@100": 0.985,
+        "n": 600,
+        "rank_ms_per_query": 4.942202776437625
+      },
+      "dev-holdout": {
+        "ndcg@10": 0.7913023805283406,
+        "mrr@10": 0.7515396825396825,
+        "mrr@100": 0.7552383867163737,
+        "recall@1": 0.6666666666666666,
+        "recall@10": 0.915,
+        "recall@100": 0.9916666666666667,
+        "n": 600,
+        "rank_ms_per_query": 4.813316734895731
+      }
+    }
+  },
+  {
+    "name": "q6 full knobs",
+    "note": "proxy sweep optimum (knobs \u00d72)",
+    "config": {
+      "models": [
+        [
+          "qwen3-emb-0.6b",
+          1.0
+        ]
+      ],
+      "query_views": [
+        [
+          "full",
+          1.0
+        ]
+      ],
+      "snippet_view": "raw",
+      "first_pass_k": 100,
+      "w_literal": 0.2,
+      "w_bm25": 0.05,
+      "w_style": 1.0,
+      "w_hub": 0.25,
+      "hub_k": 10,
+      "top_k": 100
+    },
+    "sets": {
+      "dev-tune": {
+        "ndcg@10": 0.775730441485873,
+        "mrr@10": 0.7353386243386243,
+        "mrr@100": 0.7395587888681349,
+        "recall@1": 0.6433333333333333,
+        "recall@10": 0.9,
+        "recall@100": 0.985,
+        "n": 600,
+        "rank_ms_per_query": 4.969873403509458
+      },
+      "dev-holdout": {
+        "ndcg@10": 0.7917541500649975,
+        "mrr@10": 0.751593253968254,
+        "mrr@100": 0.755212528570334,
+        "recall@1": 0.665,
+        "recall@10": 0.9166666666666666,
+        "recall@100": 0.9916666666666667,
+        "n": 600,
+        "rank_ms_per_query": 4.800365625026946
+      }
+    }
+  },
+  {
+    "name": "j0 jina raw",
+    "note": "base model, raw text, cosine only (dev contaminated, D-040)",
+    "config": {
+      "models": [
+        [
+          "jina-code-0.5b",
+          1.0
+        ]
+      ],
+      "query_views": [
+        [
+          "raw",
+          1.0
+        ]
+      ],
+      "snippet_view": "raw",
+      "first_pass_k": 100,
+      "w_literal": 0.0,
+      "w_bm25": 0.0,
+      "w_style": 0.0,
+      "w_hub": 0.0,
+      "hub_k": 10,
+      "top_k": 100
+    },
+    "sets": {
+      "dev-tune": {
+        "ndcg@10": 0.9586468131962664,
+        "mrr@10": 0.9469325396825397,
+        "mrr@100": 0.947086439518336,
+        "recall@1": 0.9133333333333333,
+        "recall@10": 0.9933333333333333,
+        "recall@100": 0.9983333333333333,
+        "n": 600,
+        "rank_ms_per_query": 3.283830000242839
+      },
+      "dev-holdout": {
+        "ndcg@10": 0.9776117569838476,
+        "mrr@10": 0.9699166666666665,
+        "mrr@100": 0.9699166666666665,
+        "recall@1": 0.9466666666666667,
+        "recall@10": 1.0,
+        "recall@100": 1.0,
+        "n": 600,
+        "rank_ms_per_query": 3.200367708535244
+      }
+    }
+  },
+  {
+    "name": "j1 jina +clean +half knobs",
+    "note": "j0 + pre/post-processing",
+    "config": {
+      "models": [
+        [
+          "jina-code-0.5b",
+          1.0
+        ]
+      ],
+      "query_views": [
+        [
+          "full",
+          1.0
+        ]
+      ],
+      "snippet_view": "raw",
+      "first_pass_k": 100,
+      "w_literal": 0.1,
+      "w_bm25": 0.025,
+      "w_style": 0.5,
+      "w_hub": 0.125,
+      "hub_k": 10,
+      "top_k": 100
+    },
+    "sets": {
+      "dev-tune": {
+        "ndcg@10": 0.9569094180439619,
+        "mrr@10": 0.9445595238095238,
+        "mrr@100": 0.9447549786561414,
+        "recall@1": 0.9083333333333333,
+        "recall@10": 0.9933333333333333,
+        "recall@100": 0.9983333333333333,
+        "n": 600,
+        "rank_ms_per_query": 4.9297476396895945
+      },
+      "dev-holdout": {
+        "ndcg@10": 0.9749537184288236,
+        "mrr@10": 0.966388888888889,
+        "mrr@100": 0.966388888888889,
+        "recall@1": 0.9416666666666667,
+        "recall@10": 1.0,
+        "recall@100": 1.0,
+        "n": 600,
+        "rank_ms_per_query": 4.781203264913832
+      }
+    }
+  },
+  {
+    "name": "e0 jina+qwen raw",
+    "note": "j0 + Qwen3 at 0.4 (ensemble via weighted concatenation)",
+    "config": {
+      "models": [
+        [
+          "jina-code-0.5b",
+          1.0
+        ],
+        [
+          "qwen3-emb-0.6b",
+          0.4
+        ]
+      ],
+      "query_views": [
+        [
+          "raw",
+          1.0
+        ]
+      ],
+      "snippet_view": "raw",
+      "first_pass_k": 100,
+      "w_literal": 0.0,
+      "w_bm25": 0.0,
+      "w_style": 0.0,
+      "w_hub": 0.0,
+      "hub_k": 10,
+      "top_k": 100
+    },
+    "sets": {
+      "dev-tune": {
+        "ndcg@10": 0.9633943441436013,
+        "mrr@10": 0.9533095238095238,
+        "mrr@100": 0.9534188428059397,
+        "recall@1": 0.925,
+        "recall@10": 0.9933333333333333,
+        "recall@100": 0.9966666666666667,
+        "n": 600,
+        "rank_ms_per_query": 5.013554443139583
+      },
+      "dev-holdout": {
+        "ndcg@10": 0.975672452853759,
+        "mrr@10": 0.9673611111111112,
+        "mrr@100": 0.9673611111111112,
+        "recall@1": 0.9416666666666667,
+        "recall@10": 1.0,
+        "recall@100": 1.0,
+        "n": 600,
+        "rank_ms_per_query": 4.736529929796234
+      }
+    }
+  },
+  {
+    "name": "final",
+    "note": "the submitted pipeline",
+    "config": {
+      "models": [
+        [
+          "jina-code-0.5b",
+          1.0
+        ],
+        [
+          "qwen3-emb-0.6b",
+          0.4
+        ]
+      ],
+      "query_views": [
+        [
+          "full",
+          1.0
+        ]
+      ],
+      "snippet_view": "raw",
+      "first_pass_k": 100,
+      "w_literal": 0.1,
+      "w_bm25": 0.025,
+      "w_style": 0.5,
+      "w_hub": 0.125,
+      "hub_k": 10,
+      "top_k": 100
+    },
+    "sets": {
+      "dev-tune": {
+        "ndcg@10": 0.9628855393875225,
+        "mrr@10": 0.952642857142857,
+        "mrr@100": 0.9527923048361644,
+        "recall@1": 0.9233333333333333,
+        "recall@10": 0.9933333333333333,
+        "recall@100": 0.9966666666666667,
+        "n": 600,
+        "rank_ms_per_query": 6.669499931546549
+      },
+      "dev-holdout": {
+        "ndcg@10": 0.9736934692934631,
+        "mrr@10": 0.9647222222222223,
+        "mrr@100": 0.9647222222222223,
+        "recall@1": 0.9383333333333334,
+        "recall@10": 1.0,
+        "recall@100": 1.0,
+        "n": 600,
+        "rank_ms_per_query": 6.455757291599487
+      }
+    }
+  }
+]

@@ -1,0 +1,80 @@
+[
+  {
+    "system": "bge-small-en-v1.5 (33M)",
+    "ndcg_at_10": 0.056,
+    "mrr_at_10": null,
+    "source": "published: Granite-R2 paper, Table 11"
+  },
+  {
+    "system": "bge-small, raw text, cosine only",
+    "ndcg_at_10": 0.05638,
+    "mrr_at_10": 0.0482,
+    "source": "ours: measured on this machine (single model baseline)"
+  },
+  {
+    "system": "OpenAI text-embedding-ada-002 (API)",
+    "ndcg_at_10": 0.087,
+    "mrr_at_10": null,
+    "source": "published: CodeXEmbed paper, Table 1"
+  },
+  {
+    "system": "e5-base-v2",
+    "ndcg_at_10": 0.115,
+    "mrr_at_10": null,
+    "source": "published: CodeXEmbed paper, Table 1"
+  },
+  {
+    "system": "Voyage-code-002 (API)",
+    "ndcg_at_10": 0.265,
+    "mrr_at_10": null,
+    "source": "published: CodeXEmbed paper, Table 1"
+  },
+  {
+    "system": "SFR-Embedding-Code-400M",
+    "ndcg_at_10": 0.486,
+    "mrr_at_10": null,
+    "source": "published: CodeXEmbed paper, Table 1"
+  },
+  {
+    "system": "CodeSage-large-v2 (1.3B)",
+    "ndcg_at_10": 0.505,
+    "mrr_at_10": null,
+    "source": "published: CodeXEmbed paper, Table 1"
+  },
+  {
+    "system": "gte-modernbert-base (149M)",
+    "ndcg_at_10": 0.564,
+    "mrr_at_10": null,
+    "source": "published: Granite-R2 paper, Table 11"
+  },
+  {
+    "system": "Qwen3-Embedding-0.6B",
+    "ndcg_at_10": 0.752,
+    "mrr_at_10": null,
+    "source": "published: jina-code-embeddings paper, Table 2"
+  },
+  {
+    "system": "jina-code-0.5b, raw text, cosine only",
+    "ndcg_at_10": 0.83869,
+    "mrr_at_10": 0.80809,
+    "source": "ours: measured on this machine (single model baseline)"
+  },
+  {
+    "system": "jina-code-embeddings-0.5b",
+    "ndcg_at_10": 0.842,
+    "mrr_at_10": null,
+    "source": "published: jina-code-embeddings paper, Table 2"
+  },
+  {
+    "system": "Submitted pipeline (PrePostPipelineEncoder)",
+    "ndcg_at_10": 0.86567,
+    "mrr_at_10": 0.838005333164697,
+    "source": "ours: official mteb.evaluate run (release/appsretrieval_results.json)"
+  },
+  {
+    "system": "jina-code-embeddings-1.5b",
+    "ndcg_at_10": 0.866,
+    "mrr_at_10": null,
+    "source": "published: jina-code-embeddings paper, Table 2"
+  }
+]

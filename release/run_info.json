@@ -1,0 +1,51 @@
+{
+  "split": "test",
+  "ndcg_at_10": 0.86567,
+  "mrr_at_10": 0.838005333164697,
+  "wall_clock_s": 3141.2,
+  "index_s": 2.7,
+  "search_s": 3122.1,
+  "snippet_embeddings": {
+    "jina-code-0.5b": {
+      "encoded": 0,
+      "cached": 8765,
+      "seconds": 1.5418045222759247e-06
+    },
+    "qwen3-emb-0.6b": {
+      "encoded": 0,
+      "cached": 8765,
+      "seconds": 2.4579931050539017e-06
+    }
+  },
+  "pipeline": {
+    "models": [
+      [
+        "jina-code-0.5b",
+        1.0
+      ],
+      [
+        "qwen3-emb-0.6b",
+        0.4
+      ]
+    ],
+    "query_views": [
+      [
+        "full",
+        1.0
+      ]
+    ],
+    "snippet_view": "raw",
+    "first_pass_k": 100,
+    "w_literal": 0.1,
+    "w_bm25": 0.025,
+    "w_style": 0.5,
+    "w_hub": 0.125,
+    "hub_k": 10,
+    "top_k": 100
+  },
+  "mteb_version": "2.21.8",
+  "git_commit": "",
+  "machine": "arm64 macOS-26.3-arm64-arm-64bit, CPU only",
+  "python": "3.10.13",
+  "finished_at": "2026-09-30T16:22:13"
+}

@@ -1,0 +1,156 @@
+{
+ "str-01": [
+  {
+   "file_path": "server/services/energy-monitoring/lib/energy-monitoring.calculateEnergyFromIndexFromBeginning.js",
+   "start_line": 24,
+   "end_line": 161
+  },
+  {
+   "file_path": "server/services/energy-monitoring/lib/energy-monitoring.calculateEnergyFromIndexThirtyMinutes.js",
+   "start_line": 15,
+   "end_line": 25
+  }
+ ],
+ "str-02": [
+  {
+   "file_path": "server/lib/mdns/mdns.start.js",
+   "start_line": 36,
+   "end_line": 92
+  }
+ ],
+ "str-03": [
+  {
+   "file_path": "server/api/routes.js",
+   "start_line": 33,
+   "end_line": 1067
+  }
+ ],
+ "str-04": [
+  {
+   "file_path": "server/lib/gateway/gateway.forwardMessageToAiChat.js",
+   "start_line": 471,
+   "end_line": 828
+  }
+ ],
+ "str-05": [
+  {
+   "file_path": "front/src/components/layout/index.jsx",
+   "start_line": 131,
+   "end_line": 131
+  },
+  {
+   "file_path": "front/src/components/layout/index.jsx",
+   "start_line": 135,
+   "end_line": 135
+  }
+ ],
+ "str-06": [
+  {
+   "file_path": "front/src/routes/integration/all/energy-monitoring/EnergyMonitoring.jsx",
+   "start_line": 174,
+   "end_line": 174
+  },
+  {
+   "file_path": "front/src/routes/integration/all/energy-monitoring/EnergyMonitoring.jsx",
+   "start_line": 181,
+   "end_line": 181
+  },
+  {
+   "file_path": "front/src/routes/integration/all/energy-monitoring/EnergyMonitoring.jsx",
+   "start_line": 1551,
+   "end_line": 1551
+  }
+ ],
+ "str-07": [
+  {
+   "file_path": "front/src/routes/integration/index.js",
+   "start_line": 95,
+   "end_line": 95
+  },
+  {
+   "file_path": "front/src/routes/integration/index.js",
+   "start_line": 509,
+   "end_line": 509
+  }
+ ],
+ "str-08": [
+  {
+   "file_path": "front/src/routes/integration/all/tuya/TuyaDeviceBox.jsx",
+   "start_line": 33,
+   "end_line": 33
+  },
+  {
+   "file_path": "front/src/routes/integration/all/tuya/discover-page/TuyaGithubIssueSection.jsx",
+   "start_line": 58,
+   "end_line": 58
+  }
+ ],
+ "str-09": [
+  {
+   "file_path": "server/services/mcp/lib/formatWeather.js",
+   "start_line": 120,
+   "end_line": 129
+  },
+  {
+   "file_path": "server/services/mcp/lib/formatWeather.js",
+   "start_line": 190,
+   "end_line": 192
+  }
+ ],
+ "str-10": [
+  {
+   "file_path": "front/src/utils/downscaleImage.js",
+   "start_line": 30,
+   "end_line": 43
+  },
+  {
+   "file_path": "front/src/utils/downscaleImage.js",
+   "start_line": 45,
+   "end_line": 51
+  },
+  {
+   "file_path": "front/src/utils/downscaleImage.js",
+   "start_line": 56,
+   "end_line": 61
+  },
+  {
+   "file_path": "front/src/utils/downscaleImage.js",
+   "start_line": 66,
+   "end_line": 88
+  },
+  {
+   "file_path": "front/src/config/demo/weather.js",
+   "start_line": 24,
+   "end_line": 24
+  },
+  {
+   "file_path": "front/src/routes/error/index.jsx",
+   "start_line": 3,
+   "end_line": 23
+  }
+ ],
+ "str-11": [
+  {
+   "file_path": "front/src/components/layout/index.jsx",
+   "start_line": 79,
+   "end_line": 85
+  },
+  {
+   "file_path": "front/src/components/layout/index.jsx",
+   "start_line": 49,
+   "end_line": 54
+  }
+ ],
+ "str-12": [
+  {
+   "file_path": "front/src/actions/message.js",
+   "start_line": 8,
+   "end_line": 8
+  },
+  {
+   "file_path": "front/src/actions/message.js",
+   "start_line": 12,
+   "end_line": 19
+  }
+ ]
+}
