@@ -251,4 +251,4 @@ default** (generation is out of scope now): tick "LLM explanation", pass `--expl
 | [Gladys Assistant](https://github.com/GladysAssistant/Gladys) | Apache-2.0 | codebase for versions / agent demo (read-only) |
 | qwen2.5-coder via Ollama, faster-whisper | Apache-2.0 / MIT | optional Gladys-agent explanation, voice input |
 
-jina-code-embeddings is licensed for non-commercial use, which covers this hackathon submission.
+DEMO LINK: https://drive.google.com/file/d/15vH87EHcXKu_cyzX0yF3EVYZnRCamuJE/view?usp=sharing
