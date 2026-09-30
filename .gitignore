@@ -47,3 +47,6 @@ Thumbs.db
 .idea/
 .vscode/
 *.swp
+.claude/
+CLAUDE.md
+CLAUDE.local.md
